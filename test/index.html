@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<head>
+    <script src="ua-parser.min.js"></script>
+</head>
+<body>
+    <button id="bottone" onclick="funzione()">Cliccami</button>
+    <script>
+        function funzione() {
+            var parser = new UAParser();
+            if (parser.getDevice()=='mobile'){
+                window.location.href = 'http://www.google.com';
+            } else {
+                window.location.href = 'http://www.youtube.com';
+            }
+        }
+    </script>
+</body>
